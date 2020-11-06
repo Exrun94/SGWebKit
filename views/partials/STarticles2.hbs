@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col s12 m6">
+        <img src="avalon.png" alt="" class="responsive-img" width="250" height="250">
+
+        <table class="bordered">
+
+            <tbody>
+                <tr>
+                    <td class="collapsible">
+                        <li class="collection-item">
+                            <div class="collapsible-header">Wordpress <i
+                                    class="tiny right material-icons">arrow_drop_down_circle</i></div>
+
+                            <div class="collapsible-body">
+                                {{#each articles}}
+                                {{#is this.category "wordpress"}}
+                                {{#is this.panel "avalon"}}
+                                <a href="{{this.articleUrl}}">{{this.articleName}}</a>
+                                {{/is}}
+                                {{/is}}
+                                {{/each}}
+                            </div>
+                        </li>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
