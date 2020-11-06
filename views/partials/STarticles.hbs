@@ -1,0 +1,129 @@
+<div class="row">
+    <div class="col s12 m6">
+        <img src="avalon.png" alt="" class="responsive-img" width="250" height="250">
+
+        <ul class="collapsible">
+            <li>
+
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>WordPress</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "wordpress"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Optimization</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "optimization"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Others</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "others"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Transfer</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "transfer"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Email</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "emails"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Miscellaneous</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "miscellaneous"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>Cache</div>
+                <div class="collapsible-body">
+                    {{#each articles}}
+                    {{#is this.category "cache"}}
+                    {{#is this.panel "avalon"}}
+                    <div class="collection">
+                        <a href="{{this.articleUrl}}" class="collection-item"
+                            onclick="copyURI(event)">{{this.articleName}}
+                        </a>
+
+                    </div>
+                    {{/is}}
+                    {{/is}}
+                    {{/each}}
+                </div>
+            </li>
+        </ul>
+
+    </div>
