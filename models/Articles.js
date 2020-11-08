@@ -14,7 +14,13 @@ const articlesSchema = new mongoose.Schema({
     },
     panel: {
         type: String
-    }
+    },
+    user: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }]
+
+
 
 });
 

@@ -1,0 +1,30 @@
+<table class="highlight responsive-table">
+
+    <tbody>
+        {{#each ns}}
+        <tr>
+            <td>NS:</td>
+            <td>{{this.ns}}</td>
+        </tr>
+        {{/each}}
+        {{#each a}}
+        <tr>
+            <td>A:</td>
+            <td>{{this.value}}</td>
+        </tr>
+        {{/each}}
+        {{#each mx}}
+        <tr>
+            <td>MX:</td>
+            <td>{{this.value}}</td>
+        </tr>
+        {{/each}}
+        {{#each txt}}
+        <tr>
+            <td>TXT:</td>
+            <td>{{this.value}}</td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

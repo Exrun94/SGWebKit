@@ -1,15 +1,19 @@
 const express = require('express')
 const router = express.Router()
 const Articles = require('../models/Articles')
+const User = require('../models/User')
+const { checkAuth, isLoggedIn } = require('../misc/middleware')
+const { mongoose } = require('mongoose')
 
-router.get('/home', async(req, res) => {
+router.get('/home', isLoggedIn, checkAuth, async(req, res) => {
 
-
+    const userID = req.user._id
     try {
-        const articles = await Articles.find({}).lean();
+        const articles = await Articles.find({ user: userID }).lean();
+        console.log(articles);
 
 
-        res.render('home', { articles: articles });
+        res.render('home', { articles: articles, isLoggedIn: req.isLoggedIn });
 
     } catch (error) {
 
@@ -17,15 +21,20 @@ router.get('/home', async(req, res) => {
     }
 })
 
-router.post('/home', async(req, res) => {
+router.post('/home', checkAuth, async(req, res) => {
     const { articleName, articleUrl, panel, category } = req.body
-    console.log('Form Data: ' + articleName, articleUrl, panel, category);
+
+    const userID = req.user._id
+    console.log(userID);
 
     const article = new Articles({
         articleName: articleName,
         articleUrl: articleUrl,
         category: category,
-        panel: panel
+        panel: panel,
+        user: userID
+
+
     })
 
     try {
@@ -33,7 +42,7 @@ router.post('/home', async(req, res) => {
         console.log(`Success, article created\n ${created}`);
         res.redirect('/home')
     } catch (err) {
-        res.status(500).send('Something went wrong')
+        res.send('You must submit valid data')
     }
 })
 

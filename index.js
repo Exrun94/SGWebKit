@@ -28,6 +28,11 @@ app.use(cookieParser())
 
 // Routes
 app.use('/', require('./routers/home'))
+app.use('/', require('./routers/dns'))
+app.use('/', require('./routers/htaccess'))
+app.use('/', require('./routers/register'))
+app.use('/', require('./routers/login'))
+app.use('/', require('./routers/logout'))
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col s12 m6">
+
+
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>WWW Redirect</div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        <form action="/htaccess/www" method="POST">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="icon_prefix" type="text" class="validate" name="domain">
+                                    <label for="icon_prefix">Domain</label>
+                                    <div class="center-align">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <blockquote>
+                            <pre><a href="{{www}}" class="collection-item"
+                            onclick="copyURI(event)">{{www}}</a></pre>
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">add_circle</i>non-WWW Redirect</div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        <form action="/htaccess/non_www" method="POST">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="icon_prefix" type="text" class="validate" name="domain">
+                                    <label for="icon_prefix">Domain</label>
+                                    <div class="center-align">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <blockquote>
+                            <pre><a href="{{non_www}}" class="collection-item"
+                            onclick="copyURI(event)">{{non_www}}</a></pre>
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
