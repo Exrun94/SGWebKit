@@ -10,7 +10,7 @@ router.get('/home', isLoggedIn, checkAuth, async(req, res) => {
     const userID = req.user._id
     try {
         const articles = await Articles.find({ user: userID }).lean();
-        console.log(articles);
+        //console.log(articles);
 
 
         res.render('home', { articles: articles, isLoggedIn: req.isLoggedIn });
