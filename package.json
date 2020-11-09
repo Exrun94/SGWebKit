@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "main":
+        "build": "NODE_ENV=production webpack --config webpack.config.js"
     },
     "keywords": [],
     "author": "",
@@ -23,7 +23,12 @@
         "mongoose": "^5.10.11",
         "parse-whois": "^1.0.0",
         "trim-newlines": "^3.0.0",
+        "webpack": "^5.4.0",
         "whois": "^2.13.3",
         "whois-json": "^2.0.4"
+    },
+    "devDependencies": {
+        "@webpack-cli/init": "^1.0.3",
+        "webpack-cli": "^4.2.0"
     }
 }
