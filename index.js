@@ -3,8 +3,9 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 const connectDB = require('./config/database')()
-const hbshelpers = require('handlebars-helpers');
+const hbshelpers = require('handlebars-helpers')
 const multihelpers = hbshelpers();
 
 const app = express()
@@ -24,6 +25,7 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
+app.use(methodOverride('_method'))
 
 
 // Routes

@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="center-align col s12 m6">
-        <img src="cpanel2.png" alt="" class="responsive-img center" width="250" height="250">
-
+    <div class="col s12 m6">
+        <div class="center-align">
+            <img src="cpanel2.png" alt="" class="responsive-img center" width="250" height="250">
+        </div>
         <ul class="collapsible">
             <li>
-
                 <div class="collapsible-header"><i class="material-icons">add_circle</i>WordPress</div>
                 <div class="collapsible-body">
                     {{#each articles}}
@@ -14,13 +14,11 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
                     {{/each}}
                 </div>
-
             </li>
             <li>
                 <div class="collapsible-header"><i class="material-icons">add_circle</i>Optimization</div>
@@ -32,7 +30,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -49,7 +46,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -66,7 +62,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -83,7 +78,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -100,7 +94,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -117,7 +110,6 @@
                         <a href="{{this.articleUrl}}" class="collection-item" onclick="copyURI(event)"> <i
                                 class="material-icons tiny">link</i> {{this.articleName}}
                         </a>
-
                     </div>
                     {{/is}}
                     {{/is}}
@@ -125,5 +117,4 @@
                 </div>
             </li>
         </ul>
-
     </div>
