@@ -1,6 +1,5 @@
 const express = require('express')
 const whois = require('whois-json')
-const moment = require('moment')
 const router = express.Router()
 const dnsRecords = require('@layered/dns-records');
 const { nsResolver, aResolver, mxResolver, txtResolver, } = require('../misc/dnsResolver')
