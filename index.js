@@ -35,6 +35,7 @@ app.use('/', require('./routers/htaccess'))
 app.use('/', require('./routers/register'))
 app.use('/', require('./routers/login'))
 app.use('/', require('./routers/logout'))
+app.use('/', require('./routers/404'))
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
